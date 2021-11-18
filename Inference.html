@@ -24,19 +24,13 @@ var barColors = [
 ];
 get()
 
-function get () {
-  // (A) GET BACK PASS VARS
-  var passvars = document.cookie
-    .split("; ")
-    .find(row => row.startsWith("pass"))
-    //.substring(5);
- 
-  // (B) PARSE BACK
-  var params = new URLSearchParams(passvars),
+function get(){
+  // (A) GET THE PARAMETERS
+  var params = new URLSearchParams(window.location.search),
       first = params.get("first"),
       second = JSON.parse(params.get("second"));
- 
-  // (C) IT WORKS!
+
+  // (B) IT WORKS!
   console.log(first); // Foo Bar
   console.log(second); // ["Hello", "World"]
 }
