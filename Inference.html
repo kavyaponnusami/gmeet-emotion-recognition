@@ -29,7 +29,7 @@ function get () {
   var passvars = document.cookie
     .split("; ")
     .find(row => row.startsWith("pass"))
-    .substring(5);
+    //.substring(5);
  
   // (B) PARSE BACK
   var params = new URLSearchParams(passvars),
