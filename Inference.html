@@ -24,21 +24,9 @@ var barColors = [
 ];
 get()
 
-function get () {
-  // (A) GET FROM SESSION
-  var first = localStorage.getItem("first"),
-      // JSON parse to turn stored sting back into array
-      second = JSON.parse(localStorage.getItem("second"));
-
-  // (B) IT WORKS!
-  // NOTE: Local storage is persistent
-  // Will not be deleted unless user clears browser data or manually cleared
+function get(){
   console.log(first); // Foo Bar
   console.log(second); // ["Hello", "World"]
-
-  // (EXTRA) TO CLEAR
-  // localStorage.removeItem("KEY");
-  // localStorage.clear();
 }
 
 
