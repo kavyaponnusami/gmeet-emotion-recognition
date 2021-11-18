@@ -32,11 +32,11 @@ function get () {
  
   // (B) PARSE BACK
   var params = new URLSearchParams(passvars),
-     // first = params.get("first"),
+      first = params.get("first"),
       second = JSON.parse(params.get("second"));
  
   // (C) IT WORKS!
-  //console.log(first); // Foo Bar
+  console.log(first); // Foo Bar
   console.log(second); // ["Hello", "World"]
 }
 
