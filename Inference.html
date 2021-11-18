@@ -28,16 +28,16 @@ function get () {
   var passvars = document.cookie
     .split("; ")
     .find(row => row.startsWith("pass"));
-    //.substring(5);
+    .substring(5);
  
   // (B) PARSE BACK
   var params = new URLSearchParams(passvars),
-      inf_res = params.get("inf_res"),
+      first = params.get("first"),
       inferences = JSON.parse(params.get("inferences"));
  
   // (C) IT WORKS!
   console.log(inferences); // Foo Bar
-  console.log(inf_res); // ["Hello", "World"]
+  console.log(first); // ["Hello", "World"]
 }
 
 
