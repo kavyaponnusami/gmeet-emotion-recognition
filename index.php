@@ -1,1 +1,1 @@
-<?php include_once("inference.html"); ?>
+<?php include_once("Inference.html"); ?>
