@@ -24,15 +24,21 @@ var barColors = [
 ];
 get()
 
-function get(){
-  // (A) GET THE PARAMETERS
-  var params = new URLSearchParams(window.location.search),
-      first = params.get("first"),
-      second = JSON.parse(params.get("second"));
+function get () {
+  // (A) GET FROM SESSION
+  var first = localStorage.getItem("first"),
+      // JSON parse to turn stored sting back into array
+      second = JSON.parse(localStorage.getItem("second"));
 
   // (B) IT WORKS!
+  // NOTE: Local storage is persistent
+  // Will not be deleted unless user clears browser data or manually cleared
   console.log(first); // Foo Bar
   console.log(second); // ["Hello", "World"]
+
+  // (EXTRA) TO CLEAR
+  // localStorage.removeItem("KEY");
+  // localStorage.clear();
 }
 
 
