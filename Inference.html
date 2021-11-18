@@ -22,6 +22,24 @@ var barColors = [
   "#ff7401",
   "#f6ff6c"
 ];
+get()
+function get () {
+  // (A) GET BACK PASS VARS
+  var passvars = document.cookie
+    .split("; ")
+    .find(row => row.startsWith("pass"))
+    .substring(5);
+ 
+  // (B) PARSE BACK
+  var params = new URLSearchParams(passvars),
+     // first = params.get("first"),
+      second = JSON.parse(params.get("second"));
+ 
+  // (C) IT WORKS!
+  //console.log(first); // Foo Bar
+  console.log(second); // ["Hello", "World"]
+}
+
 
 new Chart("myChart", {
   type: "pie",
