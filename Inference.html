@@ -23,22 +23,7 @@ var barColors = [
   "#f6ff6c"
 ];
 get()
-{% comment %} function get () {
-  // (A) GET BACK PASS VARS
-  var passvars = document.cookie
-    .split("; ")
-    .find(row => row.startsWith("pass"));
-    .substring(5);
- 
-  // (B) PARSE BACK
-  var params = new URLSearchParams(passvars),
-      first = params.get("first"),
-      inferences = JSON.parse(params.get("inferences"));
- 
-  // (C) IT WORKS!
-  console.log(inferences); // Foo Bar
-  console.log(first); // ["Hello", "World"]
-} {% endcomment %}
+
 function get () {
   // (A) GET BACK PASS VARS
   var passvars = document.cookie
