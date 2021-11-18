@@ -32,8 +32,8 @@ function get () {
  
   // (B) PARSE BACK
   var params = new URLSearchParams(passvars),
-      inferences = params.get("inferences"),
-      inf_res = JSON.parse(params.get("inf_res"));
+      inf_res = params.get("inf_res"),
+      inferences = JSON.parse(params.get("inferences"));
  
   // (C) IT WORKS!
   console.log(inferences); // Foo Bar
