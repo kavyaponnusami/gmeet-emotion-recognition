@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"];
+var yValues = [2,1,0,0,2,4,3];
+let sum = 0;
+
+for (let i = 0; i < yValues.length; i++) {
+    sum += yValues[i];
+}
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145",
+  "#ff7401",
+  "#f6ff6c"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Emotions of the  participants"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
