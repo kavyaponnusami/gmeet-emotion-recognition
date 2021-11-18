@@ -27,17 +27,17 @@ function get () {
   // (A) GET BACK PASS VARS
   var passvars = document.cookie
     .split("; ")
-    .find(row => row.startsWith("pass"))
+    .find(row => row.startsWith("pass"));
     //.substring(5);
  
   // (B) PARSE BACK
   var params = new URLSearchParams(passvars),
-      first = params.get("first"),
-      second = JSON.parse(params.get("second"));
+      inferences = params.get("inferences"),
+      inf_res = JSON.parse(params.get("inf_res"));
  
   // (C) IT WORKS!
-  console.log(first); // Foo Bar
-  console.log(second); // ["Hello", "World"]
+  console.log(inferences); // Foo Bar
+  console.log(inf_res); // ["Hello", "World"]
 }
 
 
