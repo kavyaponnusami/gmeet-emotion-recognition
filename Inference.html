@@ -26,14 +26,15 @@ get()
 
 function get () {
   // (A) GET FROM SESSION
-  var first = sessionStorage.getItem("first"),
+  
       // JSON parse to turn stored sting back into array
-      second = JSON.parse(sessionStorage.getItem("second"));
+  var sessionstr=sessionStorage.getItem("second");
+  var second = JSON.parse(sessionstr);
 
   // (B) IT WORKS!
   // Manually opening 1b-session.html will not work though
   // Session data will perish once tab/window is closed
-  console.log(first); // Foo Bar
+  
   console.log(second); // ["Hello", "World"]
 
   // (EXTRA) TO CLEAR
