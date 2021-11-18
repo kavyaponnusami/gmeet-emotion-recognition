@@ -22,25 +22,6 @@ var barColors = [
   "#ff7401",
   "#f6ff6c"
 ];
-{% comment %} get()
-
-function get () {
-  // (A) GET FROM SESSION
-  
-      // JSON parse to turn stored sting back into array
-  var sessionstr=sessionStorage.getItem("second");
-  var second = JSON.parse(sessionstr);
-
-  // (B) IT WORKS!
-  // Manually opening 1b-session.html will not work though
-  // Session data will perish once tab/window is closed
-  
-  console.log(second); // ["Hello", "World"]
-
-  // (EXTRA) TO CLEAR
-  // sessionStorage.removeItem("KEY");
-  // sessionStorage.clear();
-} {% endcomment %}
 function getCookie(c_name) {
     var i, x, y, ARRcookies = document.cookie.split(";");
 
