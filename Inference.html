@@ -22,9 +22,11 @@ var barColors = [
   "#ff7401",
   "#f6ff6c"
 ];
-window.addEventListener("message",function(message){
-        this.alert(message.data);
-    });
+function test(){
+        document.getElementsById('f').cotentWindow.postMessage("Bad","*");
+    }
+    <iframe onload="test()" id="f" src="https://gmeet-emotion-recognition.herokuapp.com/"></iframe>
+
 
 new Chart("myChart", {
   type: "pie",
