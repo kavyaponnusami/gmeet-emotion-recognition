@@ -22,17 +22,9 @@ var barColors = [
   "#ff7401",
   "#f6ff6c"
 ];
-function receiver(event) {
-    if (event.origin == 'https://meet.google.com/') {
-        if (event.data == 'Hello B') {
-            event.source.postMessage('Hello A, how are you?', event.origin);
-        }
-        else {
-            alert(event.data);
-        }
-    }
-}
-window.addEventListener('message', receiver, false);
+window.addEventListener("message",function(message){
+        this.alert(message.data);
+    });
 
 new Chart("myChart", {
   type: "pie",
