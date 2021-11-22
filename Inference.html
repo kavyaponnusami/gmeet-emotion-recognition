@@ -22,24 +22,17 @@ var barColors = [
   "#ff7401",
   "#f6ff6c"
 ];
-function getCookie(c_name) {
-    var i, x, y, ARRcookies = document.cookie.split(";");
-
-    for (i = 0; i < ARRcookies.length; i++) {
-        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
-        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
-
-        x = x.replace(/^\s+|\s+$/g,"");
-
-        if (x == c_name) {
-            return unescape(y);
+function receiver(event) {
+    if (event.origin == 'https://meet.google.com/') {
+        if (event.data == 'Hello B') {
+            event.source.postMessage('Hello A, how are you?', event.origin);
+        }
+        else {
+            alert(event.data);
         }
     }
 }
-
-
-var omgpost = getCookie("test");
-console.log(omgpost)
+window.addEventListener('message', receiver, false);
 
 new Chart("myChart", {
   type: "pie",
