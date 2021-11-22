@@ -22,9 +22,7 @@ var barColors = [
   "#ff7401",
   "#f6ff6c"
 ];
-function test(){
-        document.getElementsById('f').cotentWindow.postMessage("Bad","*");
-    }
+
 
 
 
@@ -44,8 +42,11 @@ new Chart("myChart", {
     }
   }
 });
+function test(){
+        document.getElementsById("f").cotentWindow.postMessage("Bad","*");
+    }
 </script>
-<iframe onload="test()" id="f" src="https://gmeet-emotion-recognition.herokuapp.com/">
+<iframe onload="test()" id="f" src="https://meet.google.com/wmu-ajux-gfy">
 </iframe>
 </body>
 </html>
