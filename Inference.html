@@ -42,11 +42,17 @@ new Chart("myChart", {
     }
   }
 });
-function test(){
-        document.getElementsById("f").cotentWindow.postMessage("Bad","*");
-    }
-</script>
-<iframe onload="test()" id="f" src="https://meet.google.com/wmu-ajux-gfy">
-</iframe>
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    console.log(sender.tab ?
+                "from a content script:" + sender.tab.url :
+                "from the extension");
+    if (request.greeting === "hello")
+      sendResponse({farewell: "goodbye"});
+  }
+);
+</script>   
+
 </body>
 </html>
