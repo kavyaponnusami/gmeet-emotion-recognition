@@ -44,7 +44,7 @@ new Chart("myChart", {
 });
 
 window.addEventListener('message', (event) => {
-    
+    console.log(event)
     // Do not do anything unless the message was from
     // a domain we trust.
     if (event.origin !== 'https://meet.google.com/') return;
