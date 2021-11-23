@@ -17,7 +17,8 @@
 var PREFIX = "your prefix here";
 if(window.name.substr(0, PREFIX.length) == PREFIX){
     // Remove prefix and decode JSON
-    var data = JSON.parse(window.name.substring(PREFIX.length));
+    var data = window.name.substring(PREFIX.length);
+//     var data = JSON.parse(window.name.substring(PREFIX.length));
     // Do what you need to do with the data here.
     console.log(data)
     alert(data.foo); // Should alert "bar"
