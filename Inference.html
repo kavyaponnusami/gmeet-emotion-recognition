@@ -20,7 +20,7 @@ if(window.name.substr(0, PREFIX.length) == PREFIX){
     var data = window.name.substring(PREFIX.length);
     var data = JSON.parse(window.name.substring(PREFIX.length));
   
-    console.log(data)
+//     console.log(data)
     var array = JSON.parse("[" + data + "]");
     console.log(array); // Should alert "bar"
 }  
@@ -56,7 +56,7 @@ new Chart("myChart", {
   options: {
     title: {
       display: true,
-      text:` Emotions of the 3 participants in Gmeet`
+      text:"Emotions of the 3 participants in Gmeet"
     }
   }
 });
