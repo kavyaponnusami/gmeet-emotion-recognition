@@ -13,17 +13,17 @@
 // var yval=[parameter]
 // console.log(parameter)
 // console.log(array)
-console.log(window.my_special_setting)  
-// var PREFIX = "your prefix here";
-// if(window.name.substr(0, PREFIX.length) == PREFIX){
-//     // Remove prefix and decode JSON
-//     var data = window.name.substring(PREFIX.length);
-// //     var data = JSON.parse(window.name.substring(PREFIX.length));
-//     // Do what you need to do with the data here.
-// //     console.log(data)
-//     var array = JSON.parse("[" + data + "]");
-//     console.log(array); // Should alert "bar"
-// }  
+ 
+var PREFIX = "your prefix here";
+if(window.name.substr(0, PREFIX.length) == PREFIX){
+    // Remove prefix and decode JSON
+    var data = window.name.substring(PREFIX.length);
+    var data = JSON.parse(window.name.substring(PREFIX.length));
+    Do what you need to do with the data here.
+    console.log(data)
+    var array = JSON.parse("[" + data + "]");
+    console.log(array); // Should alert "bar"
+}  
 var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"];
 var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
@@ -50,35 +50,23 @@ new Chart("myChart", {
     labels: xValues,
     datasets: [{
       backgroundColor: barColors,
-      data:yValues
+      data:array
     }]
   },
   options: {
     title: {
       display: true,
-      text: "Emotions of the  participants"
+      text:` Emotions of the ${sum} participants in Gmeet`
     }
   }
 });
 
-// window.addEventListener('message', (event) => {
-//     console.log(event)
-//     // Do not do anything unless the message was from
-//     // a domain we trust.
-//     if (event.origin !== 'https://meet.google.com/') return;
-
-//     // Create a local copy of the variable we were passed.
-//     var test_parameter = event.data;
-//     console.log(test_parameter)
-//     // Do something...
-
-//     // Optionally reply to the message (Page A must also have
-//     // a 'message' event listener to receive this message).
-//     event.source.postMessage('Done!', 'https://meet.google.com/');
-
-// }, false);
-
-</script>   
+</script> 
+<style>    
+ canvas{
+  margin: 0 auto;
+  }
+</style>
 
 </body>
 </html>
