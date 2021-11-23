@@ -9,10 +9,10 @@
 var parUrl = window.location.search;
 var urlParams = new URLSearchParams(parUrl);
 var parameter = urlParams.get('parameter') // something
-
+var array = JSON.parse("[" + string + "]");
 var yval=[parameter]
 console.log(parameter)
-console.log(typeof parameter)
+console.log(array)
 var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"];
 var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
