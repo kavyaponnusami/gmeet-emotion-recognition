@@ -29,7 +29,7 @@ var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
 
 for (let i = 0; i < yValues.length; i++) {
-    sum += yValues[i];
+    sum += array[i];
 }
 var barColors = [
   "#b91d47",
@@ -56,7 +56,7 @@ new Chart("myChart", {
   options: {
     title: {
       display: true,
-      text: "Emotions of the  participants"
+      text: ` Emotions of the ${sum} participants in Gmeet`
     }
   }
 });
@@ -79,6 +79,10 @@ new Chart("myChart", {
 // }, false);
 
 </script>   
-
+<style>
+canvas{
+  margin: 0 auto;
+  }
+</style>
 </body>
 </html>
