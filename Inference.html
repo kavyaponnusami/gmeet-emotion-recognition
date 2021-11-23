@@ -9,7 +9,9 @@
 var parUrl = window.location.search;
 var urlParams = new URLSearchParams(parUrl);
 var parameter = urlParams.get('parameter') // something
-console.log(parameter)
+
+var yval=[parameter]
+console.log(yval)
 var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"];
 var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
@@ -36,7 +38,7 @@ new Chart("myChart", {
     labels: xValues,
     datasets: [{
       backgroundColor: barColors,
-      data: parameter
+      data:yval
     }]
   },
   options: {
