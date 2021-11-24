@@ -13,24 +13,28 @@
 // var yval=[parameter]
 // console.log(parameter)
 // console.log(array)
-    
-var PREFIX = "your prefix here";
-if(window.name.substr(0, PREFIX.length) == PREFIX){
-    // Remove prefix and decode JSON
-    var data = window.name.substring(PREFIX.length);
-//     var data = JSON.parse(window.name.substring(PREFIX.length));
-    // Do what you need to do with the data here.
-//     console.log(data)
-    var array = JSON.parse("[" + data + "]");
-    console.log(array); // Should alert "bar"
-}  
+
+//working
+// var PREFIX = "your prefix here";
+// if(window.name.substr(0, PREFIX.length) == PREFIX){
+//     // Remove prefix and decode JSON
+//     var data = window.name.substring(PREFIX.length);
+// //     var data = JSON.parse(window.name.substring(PREFIX.length));
+//     // Do what you need to do with the data here.
+// //     console.log(data)
+//     var array = JSON.parse("[" + data + "]");
+//     console.log(array); // Should alert "bar"
+// }  
+//
+   
+console.log(window.inf)    
 var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"];
 var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
 
-for (let i = 0; i < yValues.length; i++) {
-    sum += array[i];
-}
+// for (let i = 0; i < array.length; i++) {
+//     sum += array[i];
+// }
 var barColors = [
   "#b91d47",
   "#00aba9",
@@ -50,13 +54,14 @@ new Chart("myChart", {
     labels: xValues,
     datasets: [{
       backgroundColor: barColors,
-      data:array
+//       data:array
+      data:yValues
     }]
   },
   options: {
     title: {
       display: true,
-      text: ` Emotions of the ${sum} participants in Gmeet`
+//       text: ` Emotions of the ${sum} participants in Gmeet`
     }
   }
 });
