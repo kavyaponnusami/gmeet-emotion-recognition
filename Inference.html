@@ -15,19 +15,19 @@
 // console.log(array)
 
 //working
-// var PREFIX = "your prefix here";
-// if(window.name.substr(0, PREFIX.length) == PREFIX){
-//     // Remove prefix and decode JSON
-//     var data = window.name.substring(PREFIX.length);
-// //     var data = JSON.parse(window.name.substring(PREFIX.length));
-//     // Do what you need to do with the data here.
-// //     console.log(data)
-//     var array = JSON.parse("[" + data + "]");
-//     console.log(array); // Should alert "bar"
-// }  
-//
+var PREFIX = "your prefix here";
+if(window.name.substr(0, PREFIX.length) == PREFIX){
+    // Remove prefix and decode JSON
+    var data = window.name.substring(PREFIX.length);
+//     var data = JSON.parse(window.name.substring(PREFIX.length));
+    // Do what you need to do with the data here.
+//     console.log(data)
+    var array = JSON.parse("[" + data + "]");
+    console.log(array); // Should alert "bar"
+}  
+
    
-console.log(window.inf)    
+  
 var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"];
 var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
