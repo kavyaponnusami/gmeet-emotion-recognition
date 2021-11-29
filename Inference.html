@@ -32,9 +32,9 @@ var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"]
 var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
 
-// for (let i = 0; i < array.length; i++) {
-//     sum += array[i];
-// }
+for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+}
 var barColors = [
   "#b91d47",
   "#00aba9",
@@ -55,13 +55,13 @@ new Chart("myChart", {
     datasets: [{
       backgroundColor: barColors,
 //       data:array
-      data:yValues
+      data:array
     }]
   },
   options: {
     title: {
       display: true,
-//       text: ` Emotions of the ${sum} participants in Gmeet`
+      text: ` Emotions of the ${sum} participants in Gmeet`
     }
   }
 });
