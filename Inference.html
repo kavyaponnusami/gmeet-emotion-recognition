@@ -6,13 +6,7 @@
 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
 <script>
-// var parUrl = window.location.search;
-// var urlParams = new URLSearchParams(parUrl);
-// var parameter = urlParams.get('parameter') // something
-// var array = JSON.parse("[" + parameter + "]");
-// var yval=[parameter]
-// console.log(parameter)
-// console.log(array)
+
 
 //working
 var PREFIX = "your prefix here";
@@ -29,7 +23,6 @@ if(window.name.substr(0, PREFIX.length) == PREFIX){
    
   
 var xValues = ["Anger", "Disguest", "Fear", "Happy", "Neutral","Sad","Surprise"];
-var yValues = [2,1,0,0,2,4,3];
 let sum = 0;
 
 for (let i = 0; i < array.length; i++) {
@@ -44,8 +37,6 @@ var barColors = [
   "#ff7401",
   "#f6ff6c"
 ];
-
-
 
 
 new Chart("myChart", {
@@ -66,22 +57,9 @@ new Chart("myChart", {
   }
 });
 
-// window.addEventListener('message', (event) => {
-//     console.log(event)
-//     // Do not do anything unless the message was from
-//     // a domain we trust.
-//     if (event.origin !== 'https://meet.google.com/') return;
 
-//     // Create a local copy of the variable we were passed.
-//     var test_parameter = event.data;
-//     console.log(test_parameter)
-//     // Do something...
 
-//     // Optionally reply to the message (Page A must also have
-//     // a 'message' event listener to receive this message).
-//     event.source.postMessage('Done!', 'https://meet.google.com/');
 
-// }, false);
 
 </script>   
 <style>
